@@ -1,0 +1,31 @@
+{template 'common/header'}
+<!--
+<ul class="nav nav-tabs">
+    <li {if $operation == 'post'}class="active"{/if}><a href="{php echo $this->createWebUrl('stores', array('op' => 'post'))}">定金管理</a></li>
+    <li class="active"><a href="{php echo $this->createWebUrl('stores', array('op' => 'display'))}">协议管理</a></li>
+	<li  class="active"><a href="{php echo $this->createWebUrl('stores', array('op' => 'display'))}">单位管理</a></li>
+	<li {if $operation == 'display'}class="active"{/if}><a href="{php echo $this->createWebUrl('stores', array('op' => 'display'))}">认购管理</a></li>
+</ul>
+-->
+
+      <ul class="nav nav-tabs">
+		   <li class="dropdown active" >
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">单位管理 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">户型管理</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">单位管理</a></li>
+ 
+          </ul>
+        </li>
+		
+		<li>
+			<a href="#">认购管理</a>
+		</li>
+		<li>
+			<a href="#">定金管理</a>
+		</li>
+      </ul>
+
+ 
+{template 'common/footer'}

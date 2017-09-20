@@ -1,0 +1,147 @@
+body,html{
+	height:100%;
+	background-color: #f0f0f0;	
+	overflow: hidden;
+}
+.header_content
+{
+	position: fixed;
+	width:100%;
+ 
+}
+header
+{
+	background-color: #003;
+	position: relative;
+}
+ 
+
+header h1{
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	font-weight: 100;
+}
+header .button_back{
+	position: absolute;
+	top:10px;
+	left:10px;
+	width:40px;
+	height:40px;
+	background: url(../img/nav_back.png) no-repeat  ;
+	background-size: contain;
+}
+.content_panel{
+	overflow-y:scroll ;
+}
+.announce_title
+{
+	height: 2.0em;
+	line-height: 2.0em;
+	text-align: center;
+	
+}
+.label_line{
+	background: url(../img/label_line.png) no-repeat;
+	display: block;
+	background-size: contain;
+	width:100%;
+	background-position-y: 15px;
+}
+ .announce_title span
+ {
+ 	margin: 0.5em;
+ 
+ }
+.announce .announce_content{
+	width:100%;
+	height:7em;
+	background: #fff;
+}
+
+.activity{
+	margin:2.0em 0;
+}
+.activity .activity_title
+{
+	margin-left: 0.5em;
+} 
+
+.activity .activity_content
+{
+	height:10em;
+	width:100%;
+	background-color: #3cf;
+} 
+
+
+.lists{
+
+}
+.lists .list_item
+{
+	position: relative;
+	height: 3.0em;
+	line-height: 3.0em;
+	width:100%;
+	background: #fff;
+	margin:1.0em 0;
+}
+.lists .list_item a
+{
+	color: #000;
+}
+.lists .list_item .icon_forum
+{
+	background:url(../img/forum.png) no-repeat;
+	background-size: contain;
+	height:2.0em;
+	width:2.0em;
+	position: absolute;
+	top:0.5em;
+	left:0.5em;
+}
+.lists .list_item .icon_client
+{
+	background:url(../img/client.png) no-repeat;
+	background-size: contain;
+	height:2.0em;
+	width:2.0em;
+	position: absolute;
+	top:0.5em;
+	left:0.5em;
+}
+
+.lists .list_item .icon_link
+{
+	background:url(../img/icon_link.png) no-repeat;
+	background-size: contain;
+	height:2.0em;
+	width:2.0em;
+	position: absolute;
+	top:0.5em;
+	right:0.5em;
+}
+.lists .list_item .list_item_info
+{
+	 margin-left: 3.0em;
+	 text-align: left;
+}
+
+.blue-slide {
+	background: #4390EE;
+}
+.red-slide {
+	background: #CA4040;
+}
+.orange-slide {
+	background: #FF8604;
+}
+.swiper-slide {
+	line-height: 10em;
+	color: #fff;
+	text-align: center;
+}
+

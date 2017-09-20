@@ -1,0 +1,82 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+	<li class="active"><a href="{php echo $this->createWebUrl('houseadd', array('op' => 'post'))}">添加楼盘</a></li>
+    <li class="active"><a href="{php echo $this->createWebUrl('house', array('op' => 'display'))}">楼盘管理</a></li>
+	
+</ul>
+ 
+<style>
+    .form-control-excel {
+        height: 34px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+</style>
+<div class="main">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form action="" method="post" class="form-horizontal form" enctype="multipart/form-data">
+
+			  <div class="col-lg-12">
+				<div class="input-group">
+				  <input type="text" name="tel" class="form-control" placeholder="输入楼盘名称查询信息">
+				  <span class="input-group-btn">
+					<button class="btn btn-default" type="submit">查找</button>
+				  </span>
+				</div><!-- /input-group -->
+			  </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="table-responsive panel-body">
+      
+                <table class="table">
+                    <thead >
+                    <tr>
+						<th style="width:10%;">楼盘ID</th>
+                        <th style="width:14%;">楼盘名称</th>
+                        <th style="width:16%;">楼盘地址</th>
+                        <th style="width:30%;">联系电话</th>
+                        <th style="width:30%;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+					<tr>
+						<td >1</td>
+						<td>ceshi</td>
+						<td>13333333333</td>
+						<td><span class="label label-warning">未认证</span></td>
+						<td><a class="btn btn-default   " title="修改楼盘信息" href="{php echo $this->createWebUrl('houseinfo',array('id'=>$id))}"><span class="fa fa-pencil-square-o"></span></a>  
+							<a class="btn btn-default  " title="楼盘管理" href="{php echo $this->createWebUrl('housemg',array('id'=>$id))}"><span class="fa fa-cog"></span></a>
+							<a class="btn btn-default  btn-del" title="楼盘删除" href="{php echo $this->createWebUrl('housemg',array('id'=>$id))}"><span class="fa fa-times"></span></a>
+						</td>
+					</tr>
+ 
+
+                    </tbody>
+         
+                </table>
+             
+        </div>
+    </div>
+    {$pager}
+</div>
+<script>
+     $(".btn-del").click(function(){
+		
+	 });
+</script>
+	
+{template 'common/footer'}

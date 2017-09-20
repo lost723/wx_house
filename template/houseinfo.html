@@ -1,0 +1,118 @@
+{template 'common/header'}
+<ul class="nav nav-tabs">
+	<li><a href="{php echo $this->createWebUrl('house', array('op' => 'display'))}">楼盘管理</a></li>
+    <li class="active"><a href="{php echo $this->createWebUrl('houseinfo')}">楼盘信息</a></li>
+</ul>
+ 
+<link rel="stylesheet" type="text/css" href="../addons/wx_house/plugin/clockpicker/clockpicker.css" media="all">
+<script type="text/javascript" src="../addons/wx_house/plugin/clockpicker/clockpicker.js"></script>
+<link rel="stylesheet" type="text/css" href="../addons/wx_house/plugin/clockpicker/standalone.css" media="all">
+<link rel="stylesheet" type="text/css" href="../addons/wx_house/template/css/uploadify_t.css?v=2" media="all" /> 
+<div class="main">
+	<div class="panel panel-info">
+		<div class="panel-heading">楼盘详情</div>
+		<div class="panel-body">
+			<form class="form-horizontal form"> 
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">楼盘名称</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" required/>
+					</div>		
+				</div>
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">楼盘logo</label>
+					<div class="col-sm-9">
+						{php echo tpl_form_field_image('logo', $reply['logo'])}
+					</div>		
+				</div>
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">楼盘简介</label>
+					<div class="col-sm-9">
+						<textarea style="height:200px; width:535px;" class="form-control richtext" name="content" cols="70" id="reply-add-text">{$reply['content']}</textarea>
+					</div>		
+				</div>
+				
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">电话</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" required/>
+					</div>		
+				</div>
+				
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">地址</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control"  />
+					</div>		
+				</div>
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">坐标</label>
+					<div class="col-sm-9">
+						 <div class="row row-fix">
+							<div class="col-xs-4 col-sm-4">
+								<input type="text" class="form-control" placeholder="地理经度">
+							</div>
+							
+							<div class="col-xs-4 col-sm-4">
+								<input type="text" class="form-control" placeholder="地理纬度">
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<button  class="btn btn-default" type="button">选择坐标</button>
+							</div>
+						 </div>
+					</div>					
+				</div>
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">定金</label>
+					<div class="col-sm-9">
+						<div class="input-group">
+							<input type="text" class="form-control"  />
+							<span class="input-group-addon">.00元</span>
+						</div>
+					</div>		
+				</div>	
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">开盘时间</label>
+					<div class="col-sm-9">
+						 
+							<input type="text" class="form-control"  />
+						 
+					 
+					</div>		
+				</div>	
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">协议一</label>
+					<div class="col-sm-9">
+						<textarea style="height:200px; width:535px;" class="form-control richtext" name="content" cols="70" id="reply-add-text">{$reply['content']}</textarea>
+					</div>		
+				</div>
+				
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">协议二</label>
+					<div class="col-sm-9">
+						<textarea style="height:200px; width:535px;" class="form-control richtext" name="content" cols="70" id="reply-add-text">{$reply['content']}</textarea>
+					</div>		
+				</div>
+				
+				<div class="form-group">
+					<label class="col-xs-12 col-sm-3 col-md-2 control-label">协议三</label>
+					<div class="col-sm-9">
+						<textarea style="height:200px; width:535px;" class="form-control richtext" name="content" cols="70" id="reply-add-text">{$reply['content']}</textarea>
+					</div>		
+				</div>
+			</form>
+		</div>
+	</div>
+     
+ 
+   
+</div>
+<script>
+        require(['jquery', 'util'], function ($, u) {
+        $(function () {
+            u.editor($('.richtext')[0]);
+        });
+    });    
+</script>
+	
+{template 'common/footer'}
