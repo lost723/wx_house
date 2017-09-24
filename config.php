@@ -5,7 +5,7 @@
  * @author lostfish
  * 358668113
  */
- 
+ //是否启用了REDIS
 define('ONREDIS',1);
 
  

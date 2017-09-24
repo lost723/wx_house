@@ -33,6 +33,7 @@
 	<bindings>
 		<cover>
 			<entry title="用户首页" do="index" state="" direct="false" />
+			<entry title="用户登录" do="login" state="" direct="false" />
 		</cover>
 		<menu>
 			<entry title="用户管理" do="Users" state="" direct="false" />

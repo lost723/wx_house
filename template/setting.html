@@ -3,13 +3,14 @@
   <li class="active"><a>系统设置</a></li>
   
 </ol>
-<div class="panel panel-default">
+
+    <form action="" method="post" class="form-horizontal form" id="form">
+	<div class="panel panel-default">
   <div class="panel-heading"><p>腾讯云配置</p>
    <p>启用腾讯云cos对象存储后，请把/attachment目录（不包括此目录）下的子文件及子目录上传至腾讯云存储, 相关工具：<a target="_blank" href="https://console.qcloud.com/cos/bucket" class="product-grey-font" >腾讯云存储</a></p>
  
   </div>
   <div class="panel-body">
-    <form action="" method="post" class="form-horizontal form" id="form">
 	<div class="form-group">
 		<label class="col-xs-12 col-sm-3 col-md-2 control-label">APPID</label>
 		<div class="col-sm-9 col-xs-12">
@@ -48,27 +49,122 @@
 	<div class="form-group">
 		<label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
 		<div class="col-sm-9 col-xs-12">
-			<button name="submit" class="btn btn-primary" value="submit">保存配置</button>
+ 
 			<button name="button" type="button" class="btn btn-info js-checkremotecos" value="check">测试配置（无需保存）</button>
-			<input type="hidden" name="token" value="{$_W['token']}" />
+ 
 		</div>
 	</div>
 	</div>
- 
+ </div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+	<p>平台支付设置</p>
+	</div>
+	<div class="panel-body">
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">微信APPID</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="wx[appid]" class="form-control" value="{$settings['wx']['appid']}" placeholder="" />
+			<span class="help-block">微信支付公众号APPID</span>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">微信商户号</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="wx[chid]" class="form-control" value="{$settings['wx']['chid']}" placeholder="" />
+			<span class="help-block">微信支付商户号</span>
+		</div>
+		</div>
+				<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">微信商户号秘钥</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="wx[secret]" class="form-control" value="{$settings['wx']['secret']}" placeholder="" />
+			<span class="help-block">微信支付商户秘钥</span>
+		</div>
+		</div>
+	</div>
 
-</form>
 </div>
- 
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-	<p>支付设置</p>
+	<p>阿里大鱼短信设置</p>
 	</div>
 	<div class="panel-body">
-	
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">阿里大鱼appkey </label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="dayu[appkey]" class="form-control" value="{$settings['dayu']['appkey']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信APPID</span>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">阿里大鱼secret</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="dayu[secret]" class="form-control" value="{$settings['dayu']['secret']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信secret</span>
+		</div>
+		</div>
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">阿里大鱼签名</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="dayu[sign]" class="form-control" value="{$settings['dayu']['sign']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信签名</span>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">阿里大鱼验证码模板</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="dayu[verifycode]" class="form-control" value="{$settings['dayu']['verifycode']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信验证码模板</span>
+		</div>
+		</div>
+		
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">阿里大鱼短信模板</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="dayu[sms]" class="form-control" value="{$settings['dayu']['sms']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信短信模板</span>
+		</div>
+		</div>
+		
 	</div>
 
 </div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+	<p>阿里云市场</p>
+	</div>
+	<div class="panel-body">
+		<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label">云市场银行卡信息验证APPCODE</label>
+		<div class="col-sm-9 col-xs-12">
+			<input type="text" name="api[appcode]" class="form-control" value="{$settings['api']['appcode']}" placeholder="" />
+			<span class="help-block">阿里大鱼短信APPID</span>
+		</div>
+		</div>
+		 
+		
+	</div>
+
+</div>
+
+<div class="form-group">
+		<label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+		<div class="col-sm-9 col-xs-12">
+			<button name="submit" class="btn btn-primary" value="submit">保存配置</button>
+ 			<input type="hidden" name="token" value="{$_W['token']}" />
+		</div>
+</div>
+</form>
+
+ 
+
+
 
 
 <script type="text/javascript">
@@ -109,7 +205,7 @@
 			posturl = "./index.php?c=utility&a=checkattach&do=cos&";
 			
 			$.post("./index.php?c=utility&a=checkattach&do=cos&",param, function(data) {
-				var data = $.parseJSON(data);alert(data);
+				var data = $.parseJSON(data);   
 				if(data.message.errno == 0) {
 					util.message('配置成功');
 					return false;

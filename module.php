@@ -31,6 +31,8 @@ class wx_houseModule extends WeModule {
 		global $_W, $_GPC;
 		//点击模块设置时将调用此方法呈现模块设置页面，$settings 为模块设置参数, 结构为数组。这个参数系统针对不同公众账号独立保存。
 		//在此呈现页面中自行处理post请求并保存设置参数（通过使用$this->saveSettings()来实现）
+		$qian=array(" ","　","\t","\n","\r");$hou=array("","","","","");
+		
 		if(checksubmit()) {
 			//字段验证, 并获得正确的数据$dat
 			if(!empty($_GPC['cos']['appid'])){
@@ -39,12 +41,28 @@ class wx_houseModule extends WeModule {
 					'secretid'=>$_GPC['cos']['secretid'],
 					'secretkey'=>$_GPC['cos']['secretkey'],
 					'bucket'=>$_GPC['cos']['bucket'],
-					'url'=>$_GPC['cos']['appid'],
+					'url'=>$_GPC['cos']['url']//str_replace($qian,$hou,$_GPC['cos']['url']),
+				);
+				$cfg['wx']= array(
+					'appid'=>$_GPC['wx']['appid'],
+					'chid'=>$_GPC['wx']['chid'],
+					'secret'=>$_GPC['wx']['secret']
+				);
+				$cfg['dayu'] = array(
+					'appkey' => $_GPC['dayu']['appkey'],
+					'secret' => $_GPC['dayu']['secret'],
+					'sign' => $_GPC['dayu']['sign'],
+					'verifycode' => $_GPC['dayu']['verifycode'],
+					'sms' => $_GPC['dayu']['sms'],
+				);
+				$cfg['api'] = array(
+					'appcode' => $_GPC['api']['appcode']
 				);
 			}
+		//	print_r($cfg);die;
 			$this->saveSettings($cfg);
 		}
-		 
+		//print_r($settings);die;
 		//这里来展示设置项表单
 		include $this->template('setting');
 	}
