@@ -1,0 +1,249 @@
+ {template 'header'}
+  <link rel="stylesheet" style="text/css" href="{MOBILE_STYLE}/css/index.css"/>
+ <style type="text/css">
+ .infocontainer{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+//	overflow-x:hidden;
+	position:relative;
+ }
+ 
+ .container_footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+	//height:2.0em;
+	text-align:center;
+	color:#fff;
+ }
+.container_footer .doOrder{
+	background-color:#ff973a;
+ }
+.container_footer  .agreement{
+	background-color:#efeff4;
+	color:#000;
+}
+
+.container_footer .agreement a{
+	text-decoration:underline;
+}
+
+ 
+ 
+ .favourite{
+	background:url('../addons/wx_house/style/img/favourite.svg')  no-repeat;
+ }
+ 
+ .info{
+	height:100%;
+	margin:0;
+	margin-bottom:250px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	margin-right:-15px;
+	
+	background-color:#efeff4;
+ }
+ 
+ 
+    	
+ .info .favourite{
+	display:inline-block;
+	box-sizing:border-box;
+	height:1.5em;
+	width:1.5em;
+	position:relative;
+	top:5px;
+	left:-5px;
+
+	
+ }
+ .info .calculate
+ {
+	display:inline-block;
+	height:1.5em;
+	width:3.5em;
+	line-height:1.5em;
+	color:#46A3FF;
+	border:1px solid #46A3FF;
+	text-align:center;
+	border-radius:5px;
+	
+ }
+ .info .info_header{
+	padding:5px 0;
+	
+ }
+ .info .info_header .weui-cell__ft{
+	position:relative;
+	left:-15px;
+ }
+ .info-detail{
+	margin-top:10px;
+ }
+
+ .info .info-detail{
+	background-color:#fff;
+	
+ }
+ .info .info-detail .weui-cell__bd{
+	width:50%;
+	text-align:left;
+ }
+ 
+.info .info-detail .weui-cell__ft{
+	width:50%;
+	text-align:left;
+ }
+
+ </style>
+<div class="infocontainer">
+<div class="info weui-cells">
+	<div class="weui-cell info_header">
+		<a href="javascript:history.go(-1);" style="float:left;">
+				<i class="fa fa-angle-left  fa-lg fa-fw" aria-hidden="true" style="color:#ff973a;"></i></a>
+		<div class="weui-cell__hd">基本信息</div>
+		<div class="weui-cell__bd">
+			
+		</div>
+		<div class="weui-cell__ft"><a class="favourite"></a><a class="calculate">试算</a></div>
+	</div>
+	
+	  <div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>房号</p>
+		</div>
+		<div class="weui-cell__ft">1-2502</div>
+	</div>
+	 <div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>状态</p>
+		</div>
+		<div class="weui-cell__ft">未售</div>
+	</div>
+	<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>建筑面积</p>
+		</div>
+		<div class="weui-cell__ft">94.46</div>
+	</div>
+	<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>套内建筑面积</p>
+		</div>
+		<div class="weui-cell__ft">71.82</div>
+	</div>
+	<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>花园面积</p>
+		</div>
+		<div class="weui-cell__ft">0.00</div>
+	</div>
+	<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>交楼日期</p>
+		</div>
+		<div class="weui-cell__ft">2017-12-22</div>
+	</div>
+	<div class="weui-cell info_header">
+
+		<div class="weui-cell__hd">成交信息</div>
+  
+	</div>
+ 
+		<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>交楼日期</p>
+		</div>
+		<div class="weui-cell__ft">2017-12-22</div>
+	</div>
+		<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>交楼日期</p>
+		</div>
+		<div class="weui-cell__ft">2017-12-22</div>
+	</div>		<div class="weui-cell info-detail">
+		<div class="weui-cell__bd">
+			<p>交楼日期</p>
+		</div>
+		<div class="weui-cell__ft">2017-12-22</div>
+	</div>
+	
+	
+</div>
+
+	
+		<div class="container_footer">
+			<div class="agreement">
+					<div class="agreement_radio">
+						  <input type="checkbox" name="agreement" id="agreement">
+						  <a href="#">认购书</a> &nbsp;&nbsp; <a href="#">商品房买卖合同</a>
+					</div>
+					<label for="agreement">我已阅读并同意上述条款</label>
+			</div>
+			<div class="doOrder">
+				<i class="fa fa-home fa-fw fa-lg"></i><span>我要认购</span>
+			</div>
+		</div>
+</div>
+
+{template step1}
+{template step2}
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+	$(".tab-index").addClass('weui-bar__item--on');
+	$(".doOrder").click(function(){
+		if($("#agreement").is(":checked")){
+			$("#step1").popup();
+		}
+		else
+		{
+			$.toast("请同意上述条款",2000);
+		}
+		
+	});
+	
+	$(".step1_ok").click(function()
+	{	
+		if($("#step1_agreement").is(":checked"))
+		{
+			$.closePopup("#step1");
+			$("#step2").popup();
+		}
+		else{
+			$.toast("请同意上述条款",2000);
+		}
+		
+	});
+	
+	$(".step1_cancel").click(function(){
+		$.closePopup("#step1");
+	})
+	$(".step2_cancel").click(function(){
+		$.closePopup("#step2");
+	});
+	/*
+	认购中………………
+	*/
+	$(".step2_ok").click(function(){
+		if($("#step2_agreement").is(":checked")){
+				$.closePopup("#step2");
+				$.showLoading();
+				/*
+				异步抢房认购
+				*/
+				setInterval(function(){
+					$.hideLoading();
+					window.location.href="{php echo $this->createMobileUrl('orderOk')}";
+				},3000);
+				
+		}else{
+			$.toast("请同意上述条款",2000);
+		}
+		
+		
+	});
+ </script>
+ {template 'footer'}

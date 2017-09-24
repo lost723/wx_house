@@ -1,64 +1,139 @@
  {template 'header'}
+ <link rel="stylesheet" style="text/css" href="{MOBILE_STYLE}/css/index.css"/>
  <style type="text/css">
-
-	
-	.login_box{
-		position:relative;
-		width:80%;
-		margin-left:9%;
-		margin-right:9%;
-		padding:20px 1%;
-		background:#fff;
-	//	border:1px solid #000;
-	//	height:100px;
-		margin-top:20%;
+	/*.index.common-head p{
+		color:#ff973a;
 	}
-	input::-webkit-input-placeholder
-	{
-		color:#999;
+	.myList{
+		padding:5px 15px;
 	}
-	.tips{
-		color:red;
+	.myList .weui-cell{
+		padding:0;
+	}
+	.myList .weui-cell__hd{
+		width:70px;
+		height:70px;
+	}
+	.myList .weui-cell__ft:after{
 		display:none;
 	}
-	.weui-btn
-	{
-		margin-top:15px;
+	.myList .weui-cell__bd,.myList .weui-cell__ft{
+		font-size:14px;
 	}
-	.findpwd
-	{
-		text-align:right;
+	.myList .weui-cell__bd .index_title{
+		font-size:18px;
+	}
+	.myList .index_address,.myList .index_tel{
+		color:#ccc;
+	}
+	.selector
+	{	
+		margin-top:10px;
+		background-color:#fff;
+		display:flex;
+		flex-flow:row wrap;
+		text-align:center;
+		line-height:2.0em;
+	}
+	.select_item{
+ 
+		background-image: -webkit-gradient(linear,left top,right top,color-stop(.5,transparent),color-stop(.5,#ccc));
+		background-position: 100% 0;
+		background-repeat: repeat-y;
+		background-size: 1px 100%;
+		position: relative;
+	 
+	}
+	.selector select{
+		width:99%;
+		padding:0 1px;
+		border:none;
+		background: transparent;
+		text-align:center;
+		line-height:1.5em;
+	}
+	.selector .select_item i:after{
+		position: absolute;
+		content: '';
+		top: 50%;
+		margin-top: -2px;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px;
+		border-color: #000 transparent transparent transparent;		
 	}
 	
-	.findpwd a{
-		color:#999;
-	}
-	 
+	.selector .select_item.current_sch i:after{
+		margin-top: -8px;
+		border-color: transparent transparent #f90 transparent;	
+	}*/
  </style>
 
 	<div class="container">
-	 	<div class="common-head">
-		<p>距离选房剩余：<span class="couttime">00天00时03分30秒 </span></p>
-	</div>
- <div class="container-content">
-
-			111111
-		 ssssss111
-		 ssssss111
-		 ssssss111
-		 ssssss
-		 ssssss23456<br>
-	 <br><br><br><br><br><br><br>
-	ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>ssssss<br>
-	 <br><br><br><br><br><br><br>
+	 	<div class="common-head index">
+			<p>距离选房剩余：<span class="couttime">00天00时03分30秒 </span></p>
+		</div>
+	<div class="container-content ">
+	<!--
+		<div class="selector weui-flex">
+			<div class="weui-flex__item select_item" onclick="selectOnclick(1)">
+				<i><span>区域</span></i>
+			</div>
+			<div class="weui-flex__item select_item">户型</div>
+			<div class="weui-flex__item select_item">总价</div>
+			<div class="weui-flex__item select_item">更多</div>
+		</div>-->
+	
+	
+		<div class="myList weui-cells">
+			<a class="weui-cell weui-cell_access"  href="{php echo $this->createMobileUrl('cells')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="index_title"><p>某某楼盘</p></div>
+					<div class="index_address">青岛青岛青岛青青岛青岛岛青岛</div>
+					<div class="index_tel"><i class="fa fa-phone" aria-hidden="true"> :111111</i></div>
+				</div>
+				<div class="weui-cell__ft ">
+				<div class="index_status"><label class="weui-btn weui-btn_mini weui-btn_primary">在售</label></div>
+				<div class="index_price">均价：27000元/㎡</div>
+				 
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="index_title"><p>某某楼盘</p></div>
+					<div class="index_address">青岛青岛青岛青青岛青岛岛青岛</div>
+					<div class="index_tel"><i class="fa fa-phone" aria-hidden="true">  :111111</i></div>
+				</div>
+				<div class="weui-cell__ft ">
+				<div class="index_status"><label class="weui-btn weui-btn_mini weui-btn_primary">在售</label></div>
+				<div class="index_price">均价：27000元/㎡</div>
+				 
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="index_title"><p>某某楼盘</p></div>
+					<div class="index_address">青岛青岛青岛青青岛青岛岛青岛</div>
+					<div class="index_tel"><i class="fa fa-phone" aria-hidden="true">  :<tel></tel>111111</i></div>
+				</div>
+				<div class="weui-cell__ft ">
+				<div class="index_status"><label class="weui-btn weui-btn_mini weui-btn_primary">在售</label></div>
+				<div class="index_price">均价：27000元/㎡</div>
+				 
+				</div>	
+			</a>
+		</div>
 	</div>
 
 	 
@@ -66,36 +141,23 @@
  {template nav}
  <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
 <script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+<script src="{MOBILE_STYLE}/js/common.js"></script>
  <script>
+ $(function(){
 	$(".tab-index").addClass('weui-bar__item--on');
 	var intDiff = parseInt(60);//倒计时总秒数量
-	function timer(intDiff){
-		sh = window.setInterval(function(){
-		var day=0,
-			hour=0,
-			minute=0,
-			second=0;//时间默认值        
-		if(intDiff > 0){
-			day = Math.floor(intDiff / (60 * 60 * 24));
-			hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
-			minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
-			second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-		}
-		if(day <= 9 ) day = '0' + day;
-		if(hour <= 9 ) hour = '0' + hour;
-		if (minute <= 9) minute = '0' + minute;
-		if (second <= 9) second = '0' + second;
-		$('.couttime').html(day+"天"+hour+"时"+minute+"分"+second+"秒");
-
-		intDiff--;
-		if(intDiff<0)
-		{	
-			clearInterval(sh);
-			$(".common-head p").html("微信抢房开始了！");
-		}
-		}, 1000);
-	}
+	
 	//获取剩余倒计时
 	timer(6);
+	
+	function selectOnclick(e)
+	{
+		$(".selector .select_item").addClass('current_sch');
+	
+	}
+	
+	
+ })
+	
  </script>
  {template 'footer'}

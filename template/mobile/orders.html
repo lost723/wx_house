@@ -1,0 +1,128 @@
+ {template 'header'}
+ <link rel="stylesheet" type="text/css" href="{MOBILE_STYLE}/css/index.css"/>
+ <style type="text/css">
+	.myList .weui-btn,.myList .weui-btn:active{
+		background-color:#ff973a;
+	}
+	.cell_status .weui-btn{
+		width:4.5em;
+		height:1.8em;
+		padding:0;
+		margin:0;
+		line-height:1.8em;
+	}
+	
+	.weui-btn,.weui-btn:active{
+		background-color:#ccc;
+	}
+	 
+ </style>
+ <div class="container">
+		<div class="common-head">
+			<a href="javascript:history.go(-1);" style="float:left;">
+				<i class="fa fa-angle-left  fa-lg fa-fw" aria-hidden="true" style="color:#ff973a;"></i></a>
+				<p>认购详情</p>
+		</div>
+ 
+	 <div class="container-content">
+			<div class="myList weui-cells">
+			<a class="weui-cell weui-cell_access list_item"  href="{php echo $this->createMobileUrl('houseinfo')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="cell_title"><p>005栋1单元2302号</p></div>
+					 
+				</div>
+				<div class="weui-cell__ft cancel_favourite">
+				<div class="cell_status"  ><label class="cancel_order weui-btn weui-btn_mini  weui-btn_primary ">取消认购</label>
+				
+				<label class="weui-btn weui-btn_mini  weui-btn_primary ">支付认购金</label></div>
+				 
+				 
+				</div>	
+			</a>
+						<a class="weui-cell weui-cell_access list_item"  href="{php echo $this->createMobileUrl('houseinfo')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="cell_title"><p>005栋1单元2304号</p></div>
+					 
+				</div>
+				<div class="weui-cell__ft cancel_favourite">
+				<div class="cell_status"  ><label class="weui-btn weui-btn_mini  weui-btn_primary "  >取消收藏</label></div>
+				 
+				 
+				</div>	
+			</a>
+			</div>
+	 
+	 </div>
+</div>
+ 
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+	$(".cancel_favourite").click(function(){
+		$.toast("取消成功");
+		return false;
+	});
+ </script>
+ {template 'footer'} {template 'header'}
+ <link rel="stylesheet" type="text/css" href="{MOBILE_STYLE}/css/index.css"/>
+ <style type="text/css">
+	.myList .weui-btn,.myList .weui-btn:active{
+		background-color:#ff973a;
+	}
+	
+	 
+ </style>
+ <div class="container">
+		<div class="common-head">
+			<a href="javascript:history.go(-1);" style="float:left;">
+				<i class="fa fa-angle-left  fa-lg fa-fw" aria-hidden="true" style="color:#ff973a;"></i></a>
+				<p>认购详情</p>
+		</div>
+ 
+	 <div class="container-content">
+			<div class="myList weui-cells">
+			<a class="weui-cell weui-cell_access list_item"  href="{php echo $this->createMobileUrl('houseinfo')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="cell_title"><p>005栋1单元2302号</p></div>
+					 
+				</div>
+				<div class="weui-cell__ft  ">
+				<div class="cell_status"  ><label class="weui-btn weui-btn_mini  weui-btn_primary "> 取消认购</label></div>
+				 
+				 
+				</div>	
+			</a>
+						<a class="weui-cell weui-cell_access list_item"  href="{php echo $this->createMobileUrl('houseinfo')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<div class="cell_title"><p>005栋1单元2304号</p></div>
+					 
+				</div>
+				<div class="weui-cell__ft  ">
+				<div class="cell_status"  ><label class="weui-btn weui-btn_mini  weui-btn_primary "  > 支付认购金</label><label class="weui-btn weui-btn_mini  weui-btn_primary "  > 取消认购</label></div>
+				 
+				 
+				</div>	
+			</a>
+			</div>
+	 
+	 </div>
+</div>
+ 
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+	 
+ </script>
+ {template 'footer'}

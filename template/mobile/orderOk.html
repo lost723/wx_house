@@ -1,0 +1,80 @@
+ {template 'header'}
+ <style>
+ .weui-msg__title{
+	font-weight:bold;
+ }
+ .weui-msg{
+ padding-top:16px;
+ overflow:hidden;
+ }
+ .weui-msg__title,.weui-msg__desc{
+	display:block;
+	text-align:left;
+	
+ }
+ .msg__desc a{
+	color:blue;
+	text-decoration:underline;
+ }
+ .weui-toptips{
+	position:fixed;
+	bottom:0;
+	left:0;
+ }
+ .msg-header{
+		margin:5px;
+		padding:5px;
+		background:blue;
+		color:#fff;
+		text-align:left;
+ }
+ .tips{
+	position:fixed;
+	left:0;
+	bottom:0;
+	height:1.5em;
+	width:100%;
+	text-align:center;
+ }
+ </style>
+<div class="msg-header">
+	<span>提示</span>
+</div>
+  <div class="weui-msg">
+  <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+  <div class="weui-msg__text-area">
+    <h2 class="weui-msg__title">认购成功</h2>
+    <div class="weui-msg__desc">
+		 <div>
+			<span>客户姓名：</span><span>张三</span>
+		 </div>
+		 
+		 <div>
+			<span>合同路址：</span><span>佛山市顺德区碧桂园测试项目0005栋1单元2302号</span>
+		 </div>
+		 	 <div>
+			<span>筹号：</span><span>1701010001</span>
+		 </div>
+		  
+		 	 <div>
+			<span>销控时间：</span><span>2017-06-16 14:41:24</span>
+		 </div>
+		 <a href="#">下载PDF认购书</a>
+	</div>
+  </div>
+  <div class="weui-msg__opr-area">
+    <p class="weui-btn-area">
+      <a href="{php echo $this->createMobileUrl('index')}" class="weui-btn weui-btn_plain-primary">确定</a>
+     </p>
+  </div>
+ 
+</div>
+<div class="tips bg-success">
+	<i class=""></i>已成交
+</div>
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+	 
+ </script>
+ {template 'footer'}

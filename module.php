@@ -19,6 +19,8 @@ class wx_houseModule extends WeModule {
 
 	public function fieldsFormSubmit($rid) {
 		//规则验证无误保存入库时执行，这里应该进行自定义字段的保存。这里 $rid 为对应的规则编号
+		
+		
 	}
 
 	public function ruleDeleted($rid) {
@@ -31,8 +33,18 @@ class wx_houseModule extends WeModule {
 		//在此呈现页面中自行处理post请求并保存设置参数（通过使用$this->saveSettings()来实现）
 		if(checksubmit()) {
 			//字段验证, 并获得正确的数据$dat
-			$this->saveSettings($dat);
+			if(!empty($_GPC['cos']['appid'])){
+				$cfg['cos'] =array(
+					'appid'=>$_GPC['cos']['appid'],
+					'secretid'=>$_GPC['cos']['secretid'],
+					'secretkey'=>$_GPC['cos']['secretkey'],
+					'bucket'=>$_GPC['cos']['bucket'],
+					'url'=>$_GPC['cos']['appid'],
+				);
+			}
+			$this->saveSettings($cfg);
 		}
+		 
 		//这里来展示设置项表单
 		include $this->template('setting');
 	}

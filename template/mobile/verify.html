@@ -1,0 +1,61 @@
+ {template 'header'}
+ <style type="text/css">
+	.container-footer{
+		position:fixed;
+		left:0;
+		bottom:0;
+		width:100%;
+		padding:5px 15px;
+		background-color:#fff;
+	}
+	.container-footer a{
+		background-color:#ff973a;
+	 }
+ </style>
+ <div class="container">
+		<div class="common-head">
+			<a href="javascript:history.go(-1);" style="float:left;">
+				<i class="fa fa-angle-left  fa-lg fa-fw" aria-hidden="true" style="color:#ff973a;"></i></a>
+				<p>信用认证</p>
+		</div>
+ 
+	 <div class="container-content">
+		 
+		<div class="weui-cells weui-cells_form">
+		  <div class="weui-cell">
+			<div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+			<div class="weui-cell__bd">
+			  <input class="weui-input" type="text"   placeholder="请输入真实姓名">
+			</div>
+		  </div>
+		  <div class="weui-cell " >
+			<div class="weui-cell__hd">
+			  <label class="weui-label">身份证号</label>
+			</div>
+			<div class="weui-cell__bd">
+			  <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入身份证号">
+			</div>
+		  </div>
+		  
+			<div class="weui-cell  ">
+			<div class="weui-cell__hd">
+			  <label class="weui-label">银行卡号</label>
+			</div>
+			<div class="weui-cell__bd">
+			  <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入银行卡号">
+			</div>
+		  </div>
+	 
+	 </div>
+
+</div>
+	<div class="container-footer">
+		<a class="weui-btn weui-btn_primary">提交</a>
+	</div>
+</div>
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+ 
+ </script>
+ {template 'footer'}

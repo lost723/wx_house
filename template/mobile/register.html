@@ -36,9 +36,11 @@
 	.findpwd a{
 		color:#999;
 	}
-	 
+	.register{
+		background-color:#fff;
+	}
  </style>
- <div class="container">
+ <div class="container register">
 	<div class="login_box">
 		<div class="weui-cells weui-cells_form">
 			<div class="weui-cell">
@@ -65,7 +67,7 @@
  	
 		<div class="weui-flex">
 			<div class="weui-flex__item">
-				<a href="javascript:;" class="weui-btn weui-btn_primary register">注册</a>
+				<a href="javascript:;" class="weui-btn weui-btn_primary doregister">注册</a>
 			</div>
 		</div>	
 		 	 
@@ -99,6 +101,11 @@
 			}
 			 
 	});
+	
+	$(".doregister").click(function(){
+		window.location.href="{php echo $this->createMobileUrl('index')}";
+	});
+	
 	
 
 	

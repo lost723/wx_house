@@ -12,7 +12,7 @@ define('ROOT_PATH', str_replace('site.php', '', str_replace('\\', '/', __FILE__)
 define('INC_PATH',ROOT_PATH.'inc/');
 define('MOBILE_STYLE',$_W['siteroot'].'/addons/wx_house/style');
 defined('IN_IA') or exit('Access Denied');
-
+include 'config.php';
  // 用户定义的错误处理函数
  
  // 设置用户定义的错误处理函数

@@ -1,23 +1,90 @@
  {template 'header'}
+ <link rel="stylesheet" type="text/css" href="{MOBILE_STYLE}/css/user.css"/>
  <style type="text/css">
-
-	 
+	
  </style>
  <div class="container">
+		<div class="common-head">
+			<p>个人中心</p>
+		</div>
+ 
 	 <div class="container-content">
 		<div class="user-head">
-			
+		 
+				<div class="user_head_info"> 
+					<div class="user_icon">
+						<img style="width:40px;height:40px;"/>
+					</div>
+					<div class="user_info">
+						<div class="user_info_name">
+						尚未实名认证
+						</div>
+						<div class="user_info_tel_bg">
+							18561638620
+						</div>
+					</div>
+				</div>
+			 
+		
 		</div>
 		
-		<div class="user-body">
-			<div class="weui-cell">
-				
-				
-			</div>
-			
-			<div class="user-space">
-			
-			</div>
+		
+		<div class="user_body  myList weui-cells">
+			<a class="weui-cell weui-cell_access" href="{php echo $this->createMobileUrl('verify')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<p>认证</p>
+				</div>
+				<div class="weui-cell__ft ">
+					马上认证
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access" href="{php echo $this->createMobileUrl('myfavourite')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/favourite.svg">	
+				</div>
+				<div class="weui-cell__bd">
+					<p>收藏</p>
+				</div>
+				<div class="weui-cell__ft">
+				 
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access" href="{php echo $this->createMobileUrl('orders')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<p>认购详情</p>
+				</div>
+				<div class="weui-cell__ft">
+					
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access" href="{php echo $this->createMobileUrl('verifyMoney')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/credit.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<p> 保证金</p>
+				</div>
+				<div class="weui-cell__ft">
+					
+				</div>	
+			</a>
+			<a class="weui-cell weui-cell_access" href="{php echo $this->createMobileUrl('setting')}">
+				<div class="weui-cell__hd">
+					<img src="../addons/wx_house/style/img/setting.svg">
+				</div>
+				<div class="weui-cell__bd">
+					<p> 设置</p>
+				</div>
+				<div class="weui-cell__ft">
+					
+				</div>	
+			</a>
 		</div>
 	 
 	 

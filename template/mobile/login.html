@@ -36,9 +36,11 @@
 	.findpwd a{
 		color:#999;
 	}
-	 
+	.login{
+		background-color:#fff;
+	}
  </style>
- <div class="container">
+ <div class="container login">
 	<div class="login_box">
 		<div class="weui-cells weui-cells_form">
 			<div class="weui-cell">
@@ -80,6 +82,13 @@
 	$(".login_do").click(function(){
 		  
 		$(".tips").slideToggle();
+		setInterval(function(){
+			window.location.href="{php echo $this->createMobileUrl('index')}";
+		},3000);
+	});
+	
+	$(".register").click(function(){
+		window.location.href="{php echo $this->createMobileUrl('register')}";
 	});
 	
 	$(".weui-cell input").click(function(){

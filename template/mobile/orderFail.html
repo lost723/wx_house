@@ -1,0 +1,101 @@
+ {template 'header'}
+ <style type="text/css">
+
+	
+	.login_box{
+		position:relative;
+		width:80%;
+		margin-left:9%;
+		margin-right:9%;
+		padding:20px 1%;
+		background:#fff;
+	//	border:1px solid #000;
+	//	height:100px;
+		margin-top:20%;
+	}
+	input::-webkit-input-placeholder
+	{
+		color:#999;
+	}
+	.tips{
+		color:red;
+		display:none;
+	}
+	.weui-btn
+	{
+		margin-top:15px;
+	}
+	.findpwd
+	{
+		text-align:right;
+	}
+	
+	.findpwd a{
+		color:#999;
+	}
+	 
+ </style>
+
+	<div class="container">
+	 	<div class="common-head">
+		<p>距离选房剩余：<span class="couttime">00天00时03分30秒 </span></p>
+	</div>
+ <div class="container-content">
+
+			111111
+		 ssssss111
+		 ssssss111
+		 ssssss111
+		 ssssss
+		 ssssss23456<br>
+	 <br><br><br><br><br><br><br>
+	ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>ssssss<br>
+	 <br><br><br><br><br><br><br>
+	</div>
+
+	 
+ </div>
+ {template nav}
+ <script src="{MOBILE_STYLE}/js/jquery-3.2.1.min.js"></script>
+<script src="{MOBILE_STYLE}/js/jquery-weui.min.js"></script>
+ <script>
+	$(".tab-index").addClass('weui-bar__item--on');
+	var intDiff = parseInt(60);//倒计时总秒数量
+	function timer(intDiff){
+		sh = window.setInterval(function(){
+		var day=0,
+			hour=0,
+			minute=0,
+			second=0;//时间默认值        
+		if(intDiff > 0){
+			day = Math.floor(intDiff / (60 * 60 * 24));
+			hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+			minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+			second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+		}
+		if(day <= 9 ) day = '0' + day;
+		if(hour <= 9 ) hour = '0' + hour;
+		if (minute <= 9) minute = '0' + minute;
+		if (second <= 9) second = '0' + second;
+		$('.couttime').html(day+"天"+hour+"时"+minute+"分"+second+"秒");
+
+		intDiff--;
+		if(intDiff<0)
+		{	
+			clearInterval(sh);
+			$(".common-head p").html("微信抢房开始了！");
+		}
+		}, 1000);
+	}
+	//获取剩余倒计时
+	timer(6);
+ </script>
+ {template 'footer'}

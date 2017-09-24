@@ -1,26 +1,31 @@
- 
-<div class="weui-tabbar">
+<style>
+	.nav .weui-tabbar__item.weui-bar__item--on .weui-tabbar__label
+	{
+		color:#ff973a;
+	}
+</style>
+<div class="weui-tabbar nav">
     <a href="{php echo $this->createMobileUrl('index')}" class="weui-tabbar__item tab-index">
  		<div class="weui-tabbar__icon">
-        <img src="{MOBILE_STYLE}/../icon.jpg" alt="">
+        <img src="{MOBILE_STYLE}/img/index.svg" alt="">
       </div>
       <p class="weui-tabbar__label">首页</p>
     </a>
     <a href="#" class="weui-tabbar__item">
   		<div class="weui-tabbar__icon">
-        <img src="{MOBILE_STYLE}/../icon.jpg" alt="">
+        <img src="{MOBILE_STYLE}/img/rules.svg" alt="">
       </div>
-      <p class="weui-tabbar__label">待定</p>
+      <p class="weui-tabbar__label">规划图</p>
     </a>
     <a href="#" class="weui-tabbar__item">
   		<div class="weui-tabbar__icon">
-        <img src="{MOBILE_STYLE}/../icon.jpg" alt="">
+        <img src="{MOBILE_STYLE}/img/news.svg" alt="">
       </div>
-      <p class="weui-tabbar__label">待定</p>
+      <p class="weui-tabbar__label">新闻动态</p>
     </a>
     <a href="{php echo $this->createMobileUrl('users')}" class="weui-tabbar__item tab-users">
 		<div class="weui-tabbar__icon">
-        <img src="{MOBILE_STYLE}/../icon.jpg" alt="">
+        <img src="{MOBILE_STYLE}/img/user.svg" alt="">
       </div>
       <p class="weui-tabbar__label">个人中心</p>
     </a>

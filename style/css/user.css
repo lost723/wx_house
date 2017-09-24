@@ -4,4 +4,95 @@
 	height:1.5em;
 }
 
+.common-head
+{
+	background-color:#fff;
+	border-bottom:0.1px solid #ccc;
+	text-align:center;
+	color:#666;
+	font-weight:normal;
+}
+
+.user-head{
+		width:100%;
+		padding-top:10px;
+	}
+	.user_head_info
+	{
+		width:100%;
+		padding:0 10px;
+		position:relative;
+		min-height:50px;
+		display:flex;
+		background-color:#fff;
+	}
+	
+	.user_head_info
+	{
+		display:flex;
+		line-height:30px;
+		align-items:center;
+	}
+	.user_icon
+	{
+		width:40px;
+		height:40px;
+		overflow:hidden;
+		border-radius:22px;
+		background:#999 50% no-repeat;
+		background-size:cover;
+		text-align:center;
+		line-height:44px;
+		font-size:22px;
+		color:#fff;
+		margin-right:10px;
+	}
+	.user_info
+	{
+		line-height:25px;
+		padding:15px;
+	}
+	.user_info_name
+	{
+		color:#666;
+		font-size:16px;
+	}
+	.user_info_tel_bg
+	{
+		font-size:14px;
+		color:#999;
+		background:url("../img/my_phone.svg") -3px no-repeat;
+		background-size:15px 22px;
+		padding:0 0 0 15px;
+	}
+	
+	.user_body{
+		width:100%:
+		padding-top:10px;
+	}
+	.weui-cell img{
+		width:25px;
+		height:25px;
+	}
+	.myList .weui-cell__ft
+	{
+		padding-right:23px;
+	}
+	
+	.myList .weui-cell__ft:after
+	{
+		right:13px;
+		width:9px;
+		height:9px;
+	}
+	.myList
+	{
+		font-size:16px;
+	}
+	.myList .weui-cell:before{
+		left:15px;
+	}
+
+
+
 
